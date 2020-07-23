@@ -1,10 +1,8 @@
 package _03_polymorphs;
 
-import java.awt.Color;
 import java.awt.Graphics;
 
-public class BluePolymorph extends Polymorph{
-	
+public class ImagePolymorph extends Polymorph {
 	protected int width = 50;
 	protected int height = 50;
 	
@@ -23,15 +21,15 @@ public class BluePolymorph extends Polymorph{
 	public void setHeight(int height) {
 		this.height = height;
 	}
-	
-	BluePolymorph(int x, int y) {
+	ImagePolymorph(int x, int y) {
 		super(x, y);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void draw(Graphics g) {
-		g.setColor(Color.blue);
-		g.fillRect(x, y, width, height);
+		// TODO Auto-generated method stub
+		
 	}
-	
+
 }

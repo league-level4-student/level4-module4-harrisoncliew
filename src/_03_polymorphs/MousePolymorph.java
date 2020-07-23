@@ -3,11 +3,13 @@ package _03_polymorphs;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class BluePolymorph extends Polymorph{
-	
+
+public class MousePolymorph extends Polymorph  {
+
 	protected int width = 50;
 	protected int height = 50;
-	
+	public int mouseX;
+	public int mouseY;
 	public int getWidth() {
 		return width;
 	}
@@ -24,14 +26,27 @@ public class BluePolymorph extends Polymorph{
 		this.height = height;
 	}
 	
-	BluePolymorph(int x, int y) {
+	MousePolymorph(int x, int y) {
 		super(x, y);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void draw(Graphics g) {
-		g.setColor(Color.blue);
+		// TODO Auto-generated method stub
+		g.setColor(Color.GREEN);
 		g.fillRect(x, y, width, height);
 	}
 	
+	public void update() {
+		setX(new PolymorphWindow().mouseX);
+		setY(new PolymorphWindow().mouseY);
+	}
+
+	
+
+	
+
+	
+
 }
