@@ -66,7 +66,7 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseMoti
 	public void actionPerformed(ActionEvent e) {
 		repaint();
 		for (Polymorph polymorph : polymorphs) {
-			if (polymorph instanceof MovingPolymorph) {
+			if (polymorph instanceof MovingPolymorph || polymorph instanceof CirclePolymorph) {
 				polymorph.update();
 			}
 

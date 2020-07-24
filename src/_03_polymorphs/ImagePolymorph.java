@@ -1,8 +1,12 @@
 package _03_polymorphs;
 
 import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.image.ImageObserver;
 
 public class ImagePolymorph extends Polymorph {
+	Image img = Toolkit.getDefaultToolkit().getImage("randomPicForJava");
 	protected int width = 50;
 	protected int height = 50;
 	
@@ -29,7 +33,6 @@ public class ImagePolymorph extends Polymorph {
 	@Override
 	public void draw(Graphics g) {
 		// TODO Auto-generated method stub
-		
 	}
 
 }
