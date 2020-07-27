@@ -2,7 +2,7 @@ package _04_hospital;
 
 public class Patient {
 	
-	boolean feelsCaredFor = false;
+	public boolean feelsCaredFor = false;
 	
 	public boolean feelsCaredFor() {
 		// TODO Auto-generated method stub

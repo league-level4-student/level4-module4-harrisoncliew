@@ -20,25 +20,34 @@ public class Hospital {
 
 	public void addPatient(Patient patient) {
 		// TODO Auto-generated method stub
-		
+		patients.add(patient);
 	}
 
 	public List<Patient> getPatients() {
 		// TODO Auto-generated method stub
-		return null;
+		return patients;
 	}
 
 	public void assignPatientsToDoctors() {
 		// TODO Auto-generated method stub
-		
+		int patientIndex = 0;
+		for (int i = 0; i < doctors.size(); i++) {
+				while(doctors.get(i).getPatients().size()<3&&patientIndex<patients.size()) {
+					
+						try {
+							doctors.get(i).assignPatient(patients.get(patientIndex));
+						} catch (DoctorFullException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						patientIndex++;
+					
+					
+				}
+				
+			}
 	}
-
-	
-
-	
-
-
-	
-
-	
 }
+			
+			
+		
